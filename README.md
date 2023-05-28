@@ -9,8 +9,16 @@ Also how many and which legislators voted yes and no for each given bill.
 
 ### Running the application
 
-To run this app, clone the repository, go to main folder and run the command below in terminal
+You should have [Node.js](https://nodejs.org/en) to run this application. The version used was 18.12.1.
 
+To run this app, clone the repository, go to main folder and run the commands below in terminal
+
+- Installing the dependencies
+```shell
+npm i
+```
+
+- Running the application
 ```shell
 npm run dev
 ```
