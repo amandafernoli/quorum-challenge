@@ -8,7 +8,7 @@ import { BillsVotesResponse } from "../models/responseModels/BillsVotesResponse"
 /**
  * @param billId 
  * @param votes 
- * @returns Retorna a lista de ids dos votos de um projeto de lei especifico
+ * @returns Returns the list of vote ids for a specific bill
  */
 const getListOfBillVotes = function (billId: number, votes: Vote[]): number[] {
   return votes.filter((vote) => billId == vote.bill_id).map((vote)=> vote.id);
@@ -18,7 +18,7 @@ const getListOfBillVotes = function (billId: number, votes: Vote[]): number[] {
  * @param votesIdsBillFiltered
  * @param allVotes 
  * @param voteType 
- * @returns Retorna os votos de um determinado projeto de lei verificando o tipo do voto
+ * @returns Returns the votes for a given bill by checking the type of vote
  */
 const getBillVotes = function (votesIdsBillFiltered: number[], allVotes: VoteResult[], voteType: number): VoteResult[] {
   return allVotes.filter((vote) => votesIdsBillFiltered.includes(vote.vote_id) && vote.vote_type == voteType);
@@ -26,12 +26,12 @@ const getBillVotes = function (votesIdsBillFiltered: number[], allVotes: VoteRes
 
 
 /**
- * Faz a relação entre as entidades dos parâmetros de acordo com o projeto de lei
+ * Makes the relationship between the entities of the parameters according to the bill
  * @param bills 
  * @param allVotes 
  * @param votes 
  * @param legislators 
- * @returns Retorna quantos e quais legislators votaram sim e não pra cada projeto de lei
+ * @returns Returns how many and which legislators voted yes and no for each bill
  */
 const billsVotes = function (bills: Bill[], allVotes: VoteResult[], votes: Vote[], legislators: Legislator[]): BillsVotesResponse[] {
   return bills.map((bill) => {
@@ -55,7 +55,7 @@ const billsVotes = function (bills: Bill[], allVotes: VoteResult[], votes: Vote[
 /**
  * @param sponsorId 
  * @param legislators 
- * @returns Retorna o nome de um sponsor de acordo com o Id dele
+ * @returns Returns the name of a sponsor according to its Id
  */
 const getSponsorById = function (sponsorId: number, legislators: Legislator[]): string {
   const sponsor = legislators.find((legislator) => legislator.id == sponsorId);
