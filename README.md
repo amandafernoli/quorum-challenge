@@ -1,10 +1,11 @@
 # Quorum Challenge
 
 ### What was done
-It was provided a dataset of legislators, bills, votes, and vote results in CSV files. 
 
-It was made a program to bring the list of how many bills a certain legislator voted yes and how many voted no.
-Also how many and which legislators voted yes and no for each given bill.
+For this coding challenge, was provided a dataset of legislators, bills, votes, and vote results in CSV files. 
+
+The goal is to develop a program to bring the list of how many bills a certain legislator voted yes and how many voted no.
+Also how many and which legislators voted yes and no for each given bill. After that, the result set must be stored in CSV files.
 
 
 ### Running the application
