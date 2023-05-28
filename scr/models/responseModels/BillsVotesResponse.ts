@@ -1,8 +1,7 @@
 export interface BillsVotesResponse {
-  billId: number;
+  id: number;
   title: string;
-  sponsorId: number;
-  sponsorName: string;
-  votesYes: number;
-  votesNo: number;
+  supporter_count: number;
+  opposer_count: number;
+  primary_sponsor: string;
 }

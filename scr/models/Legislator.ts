@@ -1,4 +1,4 @@
 export interface Legislator {
-  id:   number;
+  id: number;
   name: string;
 }

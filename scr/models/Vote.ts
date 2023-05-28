@@ -1,4 +1,4 @@
 export interface Vote {
-  id:   number;
+  id: number;
   bill_id: number;
 }

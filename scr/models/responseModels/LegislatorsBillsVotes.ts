@@ -1,6 +1,6 @@
 export interface LegislatorBillsVotesResponse {
-  legislatorId:   number;
-  legislatorName: string;
-  billsVotedYes: number;
-  billsVotedNo: number;
+  id: number;
+  name: string;
+  num_supported_bills: number;
+  num_opposed_bills: number;
 }

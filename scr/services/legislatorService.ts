@@ -3,17 +3,24 @@ import { Legislator } from "../models/Legislator";
 import { VoteResult } from "../models/VoteResult";
 import { LegislatorBillsVotesResponse } from "../models/responseModels/LegislatorsBillsVotes";
 
-const billsVotedForEachLegislator = function (legislators: Legislator[], votes: VoteResult[]): LegislatorBillsVotesResponse[] {
+const billsVotedForEachLegislator = function (
+  legislators: Legislator[],
+  votes: VoteResult[]
+): LegislatorBillsVotesResponse[] {
   return legislators.map((legislator) => {
-    const resultYes = votes.filter((vote) => legislator.id == vote.legislator_id && vote.vote_type == YES)
-    const resultNo = votes.filter((vote) => legislator.id == vote.legislator_id && vote.vote_type == NO)
+    const resultYes = votes.filter(
+      (vote) => legislator.id == vote.legislator_id && vote.vote_type == YES
+    );
+    const resultNo = votes.filter(
+      (vote) => legislator.id == vote.legislator_id && vote.vote_type == NO
+    );
     return {
-      legislatorId: legislator.id,
-      legislatorName: legislator.name,
-      billsVotedYes: resultYes.length,
-      billsVotedNo: resultNo.length
-    }
-  })
-}
+      id: legislator.id,
+      name: legislator.name,
+      num_supported_bills: resultYes.length,
+      num_opposed_bills: resultNo.length,
+    };
+  });
+};
 
-export { billsVotedForEachLegislator }
+export { billsVotedForEachLegislator };

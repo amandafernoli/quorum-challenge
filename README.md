@@ -10,7 +10,7 @@ Also how many and which legislators voted yes and no for each given bill. After 
 
 ### Running the application
 
-You should have [Node.js](https://nodejs.org/en) to run this application. The version used was 18.12.1.
+You should have [Node.js](https://nodejs.org/en) to run this application. The version used was `18.12.1`.
 
 To run this app, clone the repository, go to main folder and run the commands below in terminal
 
@@ -21,8 +21,10 @@ npm i
 
 - Running the application
 ```shell
-npm run dev
+npm start
 ```
+
+The output files is the folder called `outputs`.
 
 
 ### Answering the challenge questions
